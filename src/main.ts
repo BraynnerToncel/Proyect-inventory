@@ -58,8 +58,8 @@ async function bootstrap() {
   // Aplicando un Pipe global para la validación de datos de entrada
 
   const config = new DocumentBuilder()
-    .setTitle('Proyect-management system')
-    .setDescription('The proyect API management system  description')
+    .setTitle('Proyect-inventory')
+    .setDescription('The proyect API ')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
