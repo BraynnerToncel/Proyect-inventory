@@ -1,5 +1,5 @@
 import { ConfigModule } from '@nestjs/config';
-import { TypeOrmConfigAsync } from './data/database-config/typeorm.config';
+import { TypeOrmConfigAsync } from './data/database-config/typeorm/typeorm.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { getEnvPath } from 'common/helper/env.helper';
 import { Module } from '@nestjs/common';
