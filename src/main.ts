@@ -61,14 +61,6 @@ async function bootstrap() {
     .setTitle('Proyect-management system')
     .setDescription('The proyect API management system  description')
     .setVersion('1.0')
-    .addApiKey(
-      {
-        type: 'apiKey',
-        name: 'x-token',
-        in: 'header',
-      },
-      'x-token',
-    )
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, document);

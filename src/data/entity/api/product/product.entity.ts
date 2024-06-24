@@ -3,6 +3,7 @@ import {
   CreateDateColumn,
   Entity,
   PrimaryGeneratedColumn,
+  UpdateDateColumn,
 } from 'typeorm';
 
 @Entity()
@@ -28,9 +29,10 @@ export class Product {
   })
   creation_date: Date;
 
-  @CreateDateColumn({
+  @UpdateDateColumn({
     type: 'timestamp',
     nullable: false,
+    name: 'update_date',
   })
   update_date: Date;
 }
