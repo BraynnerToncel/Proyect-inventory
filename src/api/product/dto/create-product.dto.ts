@@ -1,4 +1,3 @@
-export class CreateProductDto {}
 import {
   IsString,
   MinLength,
@@ -8,7 +7,7 @@ import {
   IsNumber,
 } from 'class-validator';
 
-export class CreateUserDto {
+export class CreateProductDto {
   @IsString()
   @MinLength(3)
   @MaxLength(24)
@@ -19,13 +18,8 @@ export class CreateUserDto {
   @MaxLength(24)
   productDescription?: string;
 
-  @IsDecimal(
-    { decimal_digits: '2', force_decimal: true },
-    {
-      message: 'Product price must be a decimal number with two decimal places',
-    },
-  )
-  @Min(0, { message: 'Product price must be positive' })
+  @IsDecimal({ decimal_digits: '2', force_decimal: true })
+  @Min(0)
   productPrice: number;
 
   @IsNumber({}, { message: 'Product quantity must be a number' })
