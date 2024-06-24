@@ -36,10 +36,8 @@ export class ProductsService {
   async update(productId: string, updateProductDto: UpdateProductDto) {
     const partialProduct: Partial<Product> = { ...updateProductDto };
 
-    // Llama al método update con el productId y el objeto parcial del producto
     await this.productRepository.update(productId, partialProduct);
 
-    // Devuelve el producto actualizado
     return this.productRepository.findOne({ where: { productId } });
   }
 
